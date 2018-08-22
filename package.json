@@ -1,0 +1,20 @@
+{
+  "name": "EchoService",
+  "version": "1.0.0",
+  "description": "An API for echo back the text as it received",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "nodemon": "nodemon index.js"
+  },
+  "repository": "https://github.com/thissayantan/EchoService.git",
+  "author": "Sayantan",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
+}
