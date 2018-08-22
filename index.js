@@ -23,9 +23,7 @@ restService.get("/", function(req, res) {
 
 restService.post("/echo", function(req, res) {
   console.log(
-    req.body.queryResult.parameters["echoText"] +
-      " " +
-      req.body.queryResult.parameters.echoText
+    req.body.queryResult.parameters["echoText"]
   );
   var speech =
     req.body.queryResult &&
@@ -34,7 +32,7 @@ restService.post("/echo", function(req, res) {
       ? req.body.queryResult.parameters["echoText"]
       : "Seems like some problem. Speak again.";
   return res.json({
-    fulfillmentText: " ",
+    fulfillmentText: speech,
     fulfillmentMessages: [{ text: { text: speech } }],
     source: "webhook-echo-sample"
   });
